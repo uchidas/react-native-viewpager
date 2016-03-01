@@ -8,6 +8,7 @@ var {
   TouchableOpacity,
   View,
   Animated,
+  PixelRatio,
 } = React;
 
 var deviceWidth = Dimensions.get('window').width;
@@ -29,7 +30,8 @@ var styles = StyleSheet.create({
     width: DOT_SIZE,
     height: DOT_SIZE,
     borderRadius: DOT_SIZE / 2,
-    backgroundColor: 'rgba(100,100,100,0.5)',
+    borderColor: 'rgba(255,255,255,1)',
+    borderWidth: 1 / PixelRatio.get(),
     marginLeft: DOT_SAPCE,
     marginRight: DOT_SAPCE,
   },
@@ -39,7 +41,7 @@ var styles = StyleSheet.create({
     width: DOT_SIZE,
     height: DOT_SIZE,
     borderRadius: DOT_SIZE / 2,
-    backgroundColor: 'rgba(250,250,250,0.8)',
+    backgroundColor: 'rgba(255,255,255,1)',
     margin: DOT_SAPCE,
     bottom: 0,
   },
